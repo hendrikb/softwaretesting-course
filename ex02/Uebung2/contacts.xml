@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AddressBook>
+  <Entry FirstName="Dagobert" Gender="M" SurName="Duck">
+    <Contact type="email">dagobert@duck-enterprises.com</Contact>
+  </Entry>
+  <Entry FirstName="Daisy" Gender="F" SurName="Duck">
+    <Contact type="email">daisy@entenhausen.org</Contact>
+  </Entry>
+  <Entry FirstName="Donald" Gender="M" SurName="Duck">
+    <Contact type="phone">12345</Contact>
+  </Entry>
+  <Entry FirstName="Gustav" Gender="M" SurName="Gans">
+    <Contact type="phone">54321</Contact>
+  </Entry>
+  <Entry FirstName="Kater" Gender="M" SurName="Karlo">
+    <Contact type="email">karlo@knast.org</Contact>
+  </Entry>
+  <Entry FirstName="Klaas" Gender="M" SurName="Klever">
+    <Contact type="email">klaas@klever-enterprises.com</Contact>
+  </Entry>
+  <Entry FirstName="Micky" Gender="M" SurName="Maus">
+    <Contact type="phone">11011</Contact>
+  </Entry>
+  <Entry FirstName="Minni" Gender="F" SurName="Maus">
+    <Contact type="phone">11211</Contact>
+  </Entry>
+  <Entry FirstName="Rita" Gender="F" SurName="Rührig">
+    <Contact type="email">ruehrig@duck-enterprises.com</Contact>
+  </Entry>
+</AddressBook>
