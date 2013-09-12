@@ -26,13 +26,13 @@ import exercise2.addressbook.model.SizeLimitReachedException;
  * Komponententests für den Controller
  * 
  * Bitte Nummer der Gruppe eintragen:
- * 0
+ * 7
  * 
  * Bitte Gruppenmitglieder eintragen:
- * @author ...
- * @author ...
- * @author ...
- * @author ...
+ * @author Bergunde
+ * @author Rahner
+ * @author Sydow
+ * @author Teich
  */
 public class AddressBookControllerTest {
 	
@@ -223,7 +223,13 @@ public class AddressBookControllerTest {
 	{
 		testParameterException("Donald", "Duck", "M", "-12345", null);
 	}
-	
+
+        @Test
+	public void testNonPositivePhoneEntry()
+        {
+	    testParameterException("Donald", "Duck", "M", "0", null );
+	}
+
 	@Test
 	public void testNoNumberPhoneEntry()
 	{

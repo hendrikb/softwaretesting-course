@@ -14,13 +14,13 @@ import exercise2.addressbook.view.AddressBookView;
  * Mock-Up für den AddressBookView
  * 
  * Bitte Nummer der Gruppe eintragen:
- * 0
+ * 7
  * 
  * Bitte Gruppenmitglieder eintragen:
- * @author ...
- * @author ...
- * @author ...
- * @author ...
+ * @author Bergunde
+ * @author Rahner
+ * @author Sydow
+ * @author Teich
  */
 public class AddressBookViewMockUp implements AddressBookView {
 

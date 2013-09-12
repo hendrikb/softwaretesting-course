@@ -17,13 +17,13 @@ import exercise2.addressbook.model.SizeLimitReachedException;
  * Mock-Up für das AddressBookModel
  * 
  * Bitte Nummer der Gruppe eintragen:
- * 0
+ * 7
  * 
  * Bitte Gruppenmitglieder eintragen:
- * @author ...
- * @author ...
- * @author ...
- * @author ...
+ * @author Bergunde
+ * @author Rahner
+ * @author Sydow
+ * @author Teich
  */
 public class AddressBookModelMockUp implements AddressBookModel {
 

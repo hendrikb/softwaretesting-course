@@ -26,13 +26,13 @@ import exercise2.addressbook.model.SizeLimitReachedException;
  * Integration Test für Addressbook und Controller.
  * 
  * Bitte Nummer der Gruppe eintragen:
- * 0
+ * 7
  * 
  * Bitte Gruppenmitglieder eintragen:
- * @author ...
- * @author ...
- * @author ...
- * @author ...
+ * @author Bergunde
+ * @author Rahner
+ * @author Sydow
+ * @author Teich
  */
 public class ControllerAddressBookIntegrationTest {
 
@@ -255,4 +255,20 @@ public class ControllerAddressBookIntegrationTest {
 		Entry entry2 = model.getEntry("Rührig", "Rita");
 		assertNull( entry2 );
 	}	
+
+        @Test
+	public void testRemoveNonExistingEntry()
+	{
+		testEntry("Donald", "Duck", "M", "12345", null);
+		testEntry("Rita", "Rührig", "F", null, "ruehrig@duck-enterprises.com");
+		
+		controller.remove(2);
+		assertEquals(2, model.getEntries().size());
+		
+		Entry entry = model.getEntry("Duck", "Donald");
+		assertNotNull( entry );
+
+		Entry entry2 = model.getEntry("Rührig", "Rita");
+		assertNotNull( entry2 );
+	}
 }
