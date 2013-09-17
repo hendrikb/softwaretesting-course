@@ -7,7 +7,7 @@ Für die 3 if-elseif-else-Zweige muss je eine bestimmte Bedingung gelten.
 Für den ersten Zweig: (alphabet[mitte] < zeichen)
 Für den zweiten: (alphabet[mitte] > zeichen)
 Und für den dritten alphabet[mitte] == zeichen
-Das letzte return wird nur ausgeführt, wenn niemals alphabet[mitte] == zeichen
+Das letzte return wird nur ausgeführt, wenn niemals alphabet[mitte] == zeichen.
 
 Eingabe: z.B. ('e', {'a', 'b', 'c', 'd', 'e', 'f', 'g'}) => (4)
 -> 1. while wird ausgeführt
@@ -48,7 +48,7 @@ Der zweite Testfall führt dann zu:
 
 also dem 6. Entscheidungsergebnis.
 
-Dies entspricht einer Entscheidungsübedeckung von 100%.
+Dies entspricht einer Entscheidungsüberdeckung von 100%.
 
 c) Bestimmen Sie alle du-Ketten in suche.
 1 def(zeichen, alphabet)
@@ -71,7 +71,7 @@ Nr.	Zeile Kette
 5	5 def(mitte): p-use(mitte) 6, ( c-use(mitte) 7 )
 6	7 def(erstes): p-use(erstes) 4, ...
 7	9 def(letztes): p-use(letztes) 4, ...
-// Comment: Hier fehlen ein paar F�lle:
+// Comment: Hier fehlen ein paar Fälle:
 Ketten: [Variable, def-Zeile, use-Zeile]
 [erstes,2,5]
 [erstes,2,6]
@@ -96,7 +96,7 @@ Ketten: [Variable, def-Zeile, use-Zeile]
 [mitte,6,10]
 [mitte,6,12]
 
-d) Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständige du-KettenÜberdeckung erreicht wird.
+d) Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständige du-Kettenüberdeckung erreicht wird.
 
 TODO: test cases
 Der erste Testfall deckt alles ab
@@ -135,7 +135,7 @@ T...wurde Telefonnummer zugewiesen
 
 TODO: mark everything
 
-L�sung nr.2:
+Lösung nr.2:
 P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber
 
 +----------------+-----------+--------------+-------+------------+
@@ -199,11 +199,11 @@ d) Was passiert bei einer Implementierung der konkreten Testfälle mit einer Pro
    Diskutieren Sie die Folgen für die Testbarkeit der Implementierung anhand der Testfälle aus 2a) und 2c).
 
    Bei Lazy Evaluation wird nach dem ersten False in einer Konjunktion oder nach dem ersten True in
-   einer Disjunktion abgebrochen. In einigen F�llen k�nnen k�nnen deswegen zum Beispiel nicht alle
-   M�glichkeiten getestet werden.
+   einer Disjunktion abgebrochen. In einigen Fällen können deswegen zum Beispiel nicht alle
+   Möglichkeiten getestet werden.
 
-   Bei 2a wird sowieso alles getestet. Von daher kann man nicht noch weitere Testf�lle hinzuziehen.
+   Bei 2a wird sowieso alles getestet. Von daher kann man nicht noch weitere Testfälle hinzuziehen.
 
-   F�r 2c muss noch ein Testfall hinzugenommen werden, denn bei dem 3 Testfall, bei dem  (x.surName[0]=='D') == False
+   Für 2c muss noch ein Testfall hinzugenommen werden, denn bei dem 3 Testfall, bei dem  (x.surName[0]=='D') == False
    und (x.gender==Female) == True, wird nach dem ersten atomaren Ausdruck abgebrochen, die Auswertung des Geschlechts
-   wird �bersprungen. Es fehlt dann noch ein Testfall bei dem der Nachname mit D anf�ngt und wo die Person weiblich ist.
+   wird übersprungen. Es fehlt dann noch ein Testfall bei dem der Nachname mit D anfängt und wo die Person weiblich ist.
