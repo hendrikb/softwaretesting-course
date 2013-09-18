@@ -128,6 +128,7 @@ Aufgabe 2
 
 ```P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber```
 
+```
 +----------------+-----------+--------------+-------+------------+
 | x.gender==Male | x.age>=18 | x.contact... | P(x)  | verwenden? |
 +----------------+-----------+--------------+-------+------------+
@@ -140,11 +141,13 @@ Aufgabe 2
 | False          | False     | False        | False | Ja         |
 | False          | False     | True         | False | Ja         |
 +----------------+-----------+--------------+-------+------------+
+```
 
 > **b)** Der Filter wählt die Einträge aller Frauen aus, deren Nachname entweder "Duck" oder "Maus" ist und die über 30 Jahre alt sind.
 
 ```P(x) = x.gender==Female && (x.surName=="Duck" || x.surName=="Maus") && x.age>30```
 
+```
 +------------------+-------------------+-------------------+----------+-------+------------+
 | x.gender==Female | x.surName=="Duck" | x.surName=="Maus" | x.age>30 | P(x)  | verwenden? |
 +------------------+-------------------+-------------------+----------+-------+------------+
@@ -165,11 +168,13 @@ Aufgabe 2
 | False            | False             | False             | True     | False | Nein       |
 | False            | False             | False             | False    | False | Nein       |
 +------------------+-------------------+-------------------+----------+-------+------------+
+```
 
 > **c)** Der Filter wählt alle Einträge aus, deren Nachnamen mit "D" beginnen und die entweder weiblich sind oder männlich und zudem außerhalb der Altersgruppe 18-65 (also jünger als 18 Jahre bzw. älter als 65 Jahre) sind.
 
 ```P(x) = x.surName[0]=='D' && (x.gender==Female || x.gender==Male && (x.age<18 || x.age>65))```
 
+```
 +-------------------+------------------+----------------+----------+----------+-------+------------+
 | x.surName[0]=='D' | x.gender==Female | x.gender==Male | x.age<18 | x.age>65 | P(x)  | verwenden? |
 +-------------------+------------------+----------------+----------+----------+-------+------------+
@@ -186,6 +191,7 @@ Aufgabe 2
 | False             | False            | True           | False    | True     | False | Nein       |
 | False             | False            | True           | False    | False    | False | Nein       |
 +-------------------+------------------+----------------+----------+----------+-------+------------+
+```
 
 > **d)** Was passiert bei einer Implementierung der konkreten Testfälle mit einer Programmiersprache, die eine abkürzende Auswertung von booleschen Operatoren („Lazy Evaluation“) vornimmt?
    Diskutieren Sie die Folgen für die Testbarkeit der Implementierung anhand der Testfälle aus 2a) und 2c).
@@ -196,6 +202,6 @@ Aufgabe 2
 
    Bei 2a wird sowieso alles getestet. Von daher kann man nicht noch weitere Testfälle hinzuziehen.
 
-   Für 2c muss noch ein Testfall hinzugenommen werden, denn bei dem 3 Testfall, bei dem  (x.surName[0]=='D') == False
-   und (x.gender==Female) == True, wird nach dem ersten atomaren Ausdruck abgebrochen, die Auswertung des Geschlechts
+   Für 2c muss noch ein Testfall hinzugenommen werden, denn bei dem 3 Testfall, bei dem  ```(x.surName[0]=='D') == False```
+   und ```(x.gender==Female) == True```, wird nach dem ersten atomaren Ausdruck abgebrochen, die Auswertung des Geschlechts
    wird übersprungen. Es fehlt dann noch ein Testfall bei dem der Nachname mit D anfängt und wo die Person weiblich ist.
