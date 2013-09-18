@@ -53,15 +53,17 @@ Damit wurden alle 10 Anweisungen wenigstens einmal ausgeführt.
 > **b)** Bestimmen Sie konkrete Testfälle zur vollständigen Zweigüberdeckung und erläutern Sie,
   	 warum eine vollständige Zweigüberdeckung erreicht wird.
 
-Es gibt 3 Entscheidungen und damit 6 Entscheidungsergebnisse:
-   1 erstes <= zweites
-   2 alphabet[mitte] < zeichen
-   3 alphabet[mitte] > zeichen
+Es gibt **3 Entscheidungen** und damit **6 Entscheidungsergebnisse**:
+
+   1. ```erstes <= zweites```
+   2. ```alphabet[mitte] < zeichen```
+   3. ```alphabet[mitte] > zeichen```
 
 Um alle diese Entscheidungsergebnisse herbeizuführen sind die beiden obigen Testfälle
 ebenfalls verwendbar.
 
 Der erste Testfall führt zu:
+
     1 positiv (check)
     2 positiv (check)
     1 positiv
@@ -73,27 +75,26 @@ Der erste Testfall führt zu:
 
 also 5 Entscheidungsergebnissen.
 
-Der zweite Testfall führt dann zu:
+Der zweite Testfall führt dann zu folgendem Ergebnis, also dem 6. Entscheidungsergebnis:
+
     1 negativ (check)
 
-also dem 6. Entscheidungsergebnis.
-
-Dies entspricht einer Entscheidungsüberdeckung von 100%.
+Dies entspricht einer **Entscheidungsüberdeckung von 100%**.
 
 > **c)** Bestimmen Sie alle du-Ketten in suche.
-
-1 def(zeichen, alphabet)
-2 def(erstes)
-3 def(letztes)
-4 use(erstes, letztes)
-5 def(mitte), use(erstes, letztes)
-6 use(alphabet, mitte, zeichen)
-7 def(erstes), use(mitte)
-8 use(alphabet, mitte, zeichen)
-9 def(letztes), use(mitte)
-11 use(mitte)
+  * Zeile 1: def(zeichen, alphabet)
+  * Zeile 2: def(erstes)
+  * Zeile 3: def(letztes)
+  * Zeile 4: p-use(erstes, letztes)
+  * Zeile 5: def(mitte), c-use(erstes, letztes)
+  * Zeile 6: p-use(alphabet, mitte, zeichen)
+  * Zeile 7: def(erstes), c-use(mitte)
+  * Zeile 8: p-use(alphabet, mitte, zeichen)
+  * Zeile 9: def(letztes), c-use(mitte)
+  * Zeile 11: c-use(mitte)
 
 Ketten
+```
 Nr.	Zeile Kette
 1	1 def(zeichen): use(zeichen) 6
 2	1 def(zeichen): use(zeichen) 8
@@ -116,7 +117,7 @@ Nr.	Zeile Kette
 15	5 def(mitte): use(mitte) 8
 16	5 def(mitte): use(mitte) 9
 17	5 def(mitte): use(mitte) 11
-
+```
 > **d)** Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird
   	 ("du-Ketten-Überdeckung") und erläutern Sie,
 	 warum eine vollständie du-Kettenüberdeckung erreicht wird.
@@ -131,6 +132,7 @@ Aufgabe 2
 
 ```P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber```
 
+```
 +----------------+-----------+--------------+-------+------------+
 | x.gender==Male | x.age>=18 | x.contact... | P(x)  | verwenden? |
 +----------------+-----------+--------------+-------+------------+
@@ -143,12 +145,14 @@ Aufgabe 2
 | False          | False     | False        | False | Ja         |
 | False          | False     | True         | False | Ja         |
 +----------------+-----------+--------------+-------+------------+
+```
 
 > **b)** Der Filter wählt die Einträge aller Frauen aus, deren Nachname entweder
   	 "Duck" oder "Maus" ist und die über 30 Jahre alt sind.
 
 ```P(x) = x.gender==Female && (x.surName=="Duck" || x.surName=="Maus") && x.age>30```
 
+```
 +------------------+-------------------+-------------------+----------+-------+------------+
 | x.gender==Female | x.surName=="Duck" | x.surName=="Maus" | x.age>30 | P(x)  | verwenden? |
 +------------------+-------------------+-------------------+----------+-------+------------+
@@ -169,6 +173,7 @@ Aufgabe 2
 | False            | False             | False             | True     | False | Nein       |
 | False            | False             | False             | False    | False | Nein       |
 +------------------+-------------------+-------------------+----------+-------+------------+
+```
 
 > **c)** Der Filter wählt alle Einträge aus, deren Nachnamen mit "D" beginnen und
   	 die entweder weiblich sind oder männlich und zudem außerhalb
@@ -176,6 +181,7 @@ Aufgabe 2
 
 ```P(x) = x.surName[0]=='D' && (x.gender==Female || x.gender==Male && (x.age<18 || x.age>65))```
 
+```
 +-------------------+------------------+----------------+----------+----------+-------+------------+
 | x.surName[0]=='D' | x.gender==Female | x.gender==Male | x.age<18 | x.age>65 | P(x)  | verwenden? |
 +-------------------+------------------+----------------+----------+----------+-------+------------+
@@ -192,6 +198,7 @@ Aufgabe 2
 | False             | False            | True           | False    | True     | False | Nein       |
 | False             | False            | True           | False    | False    | False | Nein       |
 +-------------------+------------------+----------------+----------+----------+-------+------------+
+```
 
 > **d)** Was passiert bei einer Implementierung der konkreten Testfälle mit einer Programmiersprache, 
   	 die eine abkürzende Auswertung von booleschen Operatoren („Lazy Evaluation“) vornimmt?
