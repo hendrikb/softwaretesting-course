@@ -127,6 +127,8 @@ Der erste Testfall deckt hier alles ab.
 Aufgabe 2
 ==
 
+**Hinweis**: Unsere geforderte *farbliche Markierung* ist durch die Spalte "Verwenden?" gegeben! Wir verwenden Markdown um unsere Ergebnisse schnell zu produzieren, allerdings bekommen wir damit auf die Schnelle keine farbigen Tabellen gebaut. We're sorry for any inconvenience! :)
+
 > **a)** Der Filter wählt alle Einträge aus, die einen Mann repräsentieren,
   	 der 18 Jahre oder älter ist und eine Telefonnummer zugewiesen hat.
 
