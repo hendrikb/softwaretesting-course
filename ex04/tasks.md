@@ -51,14 +51,16 @@ Damit wurden alle 10 Anweisungen wenigstens einmal ausgeführt.
 
 > **b)** Bestimmen Sie konkrete Testfälle zur vollständigen Zweigüberdeckung und erläutern Sie, warum eine vollständige Zweigüberdeckung erreicht wird.
 
-Es gibt 3 Entscheidungen und damit 6 Entscheidungsergebnisse:
-   1 erstes <= zweites
-   2 alphabet[mitte] < zeichen
-   3 alphabet[mitte] > zeichen
+Es gibt **3 Entscheidungen** und damit **6 Entscheidungsergebnisse**:
+
+   1. ```erstes <= zweites```
+   2. ```alphabet[mitte] < zeichen```
+   3. ```alphabet[mitte] > zeichen```
 
 Um alle diese Entscheidungsergebnisse herbeizuführen sind die beiden obigen Testfälle ebenfalls verwendbar.
 
 Der erste Testfall führt zu:
+
     1 positiv (check)
     2 positiv (check)
     1 positiv
@@ -70,49 +72,50 @@ Der erste Testfall führt zu:
 
 also 5 Entscheidungsergebnissen.
 
-Der zweite Testfall führt dann zu:
+Der zweite Testfall führt dann zu folgendem Ergebnis, also dem 6. Entscheidungsergebnis:
+
     1 negativ (check)
 
-also dem 6. Entscheidungsergebnis.
-
-Dies entspricht einer Entscheidungsüberdeckung von 100%.
+Dies entspricht einer **Entscheidungsüberdeckung von 100%**.
 
 > **c)** Bestimmen Sie alle du-Ketten in suche.
 
-1 def(zeichen, alphabet)
-2 def(erstes)
-3 def(letztes)
-4 p-use(erstes, letztes)
-5 def(mitte), c-use(erstes, letztes)
-6 p-use(alphabet, mitte, zeichen)
-7 def(erstes), c-use(mitte)
-8 p-use(alphabet, mitte, zeichen)
-9 def(letztes), c-use(mitte)
-11 c-use(mitte)
+  * Zeile 1: def(zeichen, alphabet)
+  * Zeile 2: def(erstes)
+  * Zeile 3: def(letztes)
+  * Zeile 4: p-use(erstes, letztes)
+  * Zeile 5: def(mitte), c-use(erstes, letztes)
+  * Zeile 6: p-use(alphabet, mitte, zeichen)
+  * Zeile 7: def(erstes), c-use(mitte)
+  * Zeile 8: p-use(alphabet, mitte, zeichen)
+  * Zeile 9: def(letztes), c-use(mitte)
+  * Zeile 11: c-use(mitte)
 
 Ketten
-Nr.	Zeile Kette
-1	1 def(zeichen): p-use(zeichen) 6
-2	1 def(zeichen): p-use(zeichen) 8
+```
+Nr.  Zeile                            Kette
+1	   1 def(zeichen): p-use(zeichen)   6
+2	   1 def(zeichen): p-use(zeichen)   8
 
-3	1 def(alphabet): c-use(alphabet) 3
-4	1 def(alphabet): p-use(alphabet) 6
-5	1 def(alphabet): p-use(alphabet) 8
+3	   1 def(alphabet): c-use(alphabet) 3
+4	   1 def(alphabet): p-use(alphabet) 6
+5	   1 def(alphabet): p-use(alphabet) 8
 
-6	2 def(erstes): c-use(erstes) 5
-7	2 def(erstes): c-use(erstes) 6
-8	2 def(erstes): p-use(erstes) 4
-9	7 def(erstes): p-use(erstes) 4
+6	   2 def(erstes): c-use(erstes)     5
+7	   2 def(erstes): c-use(erstes)     6
+8	   2 def(erstes): p-use(erstes)     4
+9	   7 def(erstes): p-use(erstes)     4
 
-10	3 def(letztes): c-use(letztes) 5
-11	3 def(letztes): p-use(letztes) 4
-12	9 def(letztes): p-use(letztes) 4
+10	  3 def(letztes): c-use(letztes)   5
+11	  3 def(letztes): p-use(letztes)   4
+12	  9 def(letztes): p-use(letztes)   4
 
-13	5 def(mitte): c-use(mitte) 6
-14	5 def(mitte): c-use(mitte) 7
-15	5 def(mitte): c-use(mitte) 8
-16	5 def(mitte): c-use(mitte) 9
-17	5 def(mitte): c-use(mitte) 11
+13	  5 def(mitte): c-use(mitte)       6
+14	  5 def(mitte): c-use(mitte)       7
+15	  5 def(mitte): c-use(mitte)       8
+16	  5 def(mitte): c-use(mitte)       9
+17	  5 def(mitte): c-use(mitte)       11
+```
 
 > **d)** Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständige du-Kettenüberdeckung erreicht wird.
 
