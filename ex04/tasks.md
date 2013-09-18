@@ -1,4 +1,5 @@
 Code:
+
 ```
 1	public static int suche(final char zeichen, final char[] alphabet) {
 2	   int erstes = 0;
@@ -20,6 +21,9 @@ Code:
 
 Aufgabe 1
 ==
+
+a)
+--
 
 > **a)** Bestimmen Sie konkrete Testfälle zur vollständigen Anweisungsüberdeckung und erläutern Sie,
   	 warum eine vollständige Anweisungsüberdeckung erreicht wird.
@@ -43,6 +47,7 @@ Eingabe: z.B. ```('e', {'a', 'b', 'c', 'd', 'e', 'f', 'g'}) => (4)```
 ```
 
 Eingabe: z.B. ```('e', {}) => (-1)```
+
 ```
    -> 1. while wird nicht ausgeführt
    -> 2. return -1
@@ -50,6 +55,8 @@ Eingabe: z.B. ```('e', {}) => (-1)```
 
 Damit wurden alle 10 Anweisungen wenigstens einmal ausgeführt.
 
+b)
+--
 > **b)** Bestimmen Sie konkrete Testfälle zur vollständigen Zweigüberdeckung und erläutern Sie,
   	 warum eine vollständige Zweigüberdeckung erreicht wird.
 
@@ -64,6 +71,7 @@ ebenfalls verwendbar.
 
 Der erste Testfall führt zu:
 
+```
     1 positiv (check)
     2 positiv (check)
     1 positiv
@@ -72,16 +80,22 @@ Der erste Testfall führt zu:
     1 positiv
     2 negativ
     3 negativ (check)
+```
 
 also 5 Entscheidungsergebnissen.
 
 Der zweite Testfall führt dann zu folgendem Ergebnis, also dem 6. Entscheidungsergebnis:
 
+```
     1 negativ (check)
+```
 
 Dies entspricht einer **Entscheidungsüberdeckung von 100%**.
 
+c)
+--
 > **c)** Bestimmen Sie alle du-Ketten in suche.
+
   * Zeile 1: def(zeichen, alphabet)
   * Zeile 2: def(erstes)
   * Zeile 3: def(letztes)
@@ -94,33 +108,35 @@ Dies entspricht einer **Entscheidungsüberdeckung von 100%**.
   * Zeile 11: use(mitte)
 
 Ketten
+
 ```
-Nr.	Zeile Kette
-1	1 def(zeichen): use(zeichen) 6
-2	1 def(zeichen): use(zeichen) 8
+Nr.   Zeile                           Kette
+1     1 def(zeichen): use(zeichen)    6
+2     1 def(zeichen): use(zeichen)    8
 
-3	1 def(alphabet): use(alphabet) 3
-4	1 def(alphabet): use(alphabet) 6
-5	1 def(alphabet): use(alphabet) 8
+3     1 def(alphabet): use(alphabet)  3
+4     1 def(alphabet): use(alphabet)  6
+5     1 def(alphabet): use(alphabet)  8
 
-6	2 def(erstes): use(erstes) 5
-7	2 def(erstes): use(erstes) 6
-8	2 def(erstes): use(erstes) 4
-9	7 def(erstes): use(erstes) 4
+6     2 def(erstes): use(erstes)      5
+7     2 def(erstes): use(erstes)      6
+8     2 def(erstes): use(erstes)      4
+9     7 def(erstes): use(erstes)      4
 
-10	3 def(letztes): use(letztes) 5
-11	3 def(letztes): use(letztes) 4
-12	9 def(letztes): use(letztes) 4
+10    3 def(letztes): use(letztes)    5
+11    3 def(letztes): use(letztes)    4
+12    9 def(letztes): use(letztes)    4
 
-13	5 def(mitte): use(mitte) 6
-14	5 def(mitte): use(mitte) 7
-15	5 def(mitte): use(mitte) 8
-16	5 def(mitte): use(mitte) 9
-17	5 def(mitte): use(mitte) 11
+13    5 def(mitte): use(mitte)        6
+14    5 def(mitte): use(mitte)        7
+15    5 def(mitte): use(mitte)        8
+16    5 def(mitte): use(mitte)        9
+17    5 def(mitte): use(mitte)        11
 ```
-> **d)** Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird
-  	 ("du-Ketten-Überdeckung") und erläutern Sie,
-	 warum eine vollständie du-Kettenüberdeckung erreicht wird.
+
+d)
+--
+> **d)** Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständie du-Kettenüberdeckung erreicht wird.
 
 Der erste Testfall deckt hier alles ab.
 
@@ -129,8 +145,10 @@ Aufgabe 2
 
 **Hinweis**: Unsere geforderte *farbliche Markierung* ist durch die Spalte "Verwenden?" gegeben! Wir verwenden Markdown um unsere Ergebnisse schnell zu produzieren, allerdings bekommen wir damit auf die Schnelle keine farbigen Tabellen gebaut. We're sorry for any inconvenience! :)
 
-> **a)** Der Filter wählt alle Einträge aus, die einen Mann repräsentieren,
-  	 der 18 Jahre oder älter ist und eine Telefonnummer zugewiesen hat.
+a)
+--
+
+> **a)** Der Filter wählt alle Einträge aus, die einen Mann repräsentieren, der 18 Jahre oder älter ist und eine Telefonnummer zugewiesen hat.
 
 ```P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber```
 
@@ -149,8 +167,10 @@ Aufgabe 2
 +----------------+-----------+--------------+-------+------------+
 ```
 
-> **b)** Der Filter wählt die Einträge aller Frauen aus, deren Nachname entweder
-  	 "Duck" oder "Maus" ist und die über 30 Jahre alt sind.
+b)
+--
+
+> **b)** Der Filter wählt die Einträge aller Frauen aus, deren Nachname entweder "Duck" oder "Maus" ist und die über 30 Jahre alt sind.
 
 ```P(x) = x.gender==Female && (x.surName=="Duck" || x.surName=="Maus") && x.age>30```
 
@@ -177,9 +197,10 @@ Aufgabe 2
 +------------------+-------------------+-------------------+----------+-------+------------+
 ```
 
-> **c)** Der Filter wählt alle Einträge aus, deren Nachnamen mit "D" beginnen und
-  	 die entweder weiblich sind oder männlich und zudem außerhalb
-	 der Altersgruppe 18-65 (also jünger als 18 Jahre bzw. älter als 65 Jahre) sind.
+c)
+--
+
+> **c)** Der Filter wählt alle Einträge aus, deren Nachnamen mit "D" beginnen und die entweder weiblich sind oder männlich und zudem außerhalb der Altersgruppe 18-65 (also jünger als 18 Jahre bzw. älter als 65 Jahre) sind.
 
 ```P(x) = x.surName[0]=='D' && (x.gender==Female || x.gender==Male && (x.age<18 || x.age>65))```
 
@@ -202,17 +223,20 @@ Aufgabe 2
 +-------------------+------------------+----------------+----------+----------+-------+------------+
 ```
 
-> **d)** Was passiert bei einer Implementierung der konkreten Testfälle mit einer Programmiersprache, 
-  	 die eine abkürzende Auswertung von booleschen Operatoren („Lazy Evaluation“) vornimmt?
+d)
+--
+
+> **d)** Was passiert bei einer Implementierung der konkreten Testfälle mit einer Programmiersprache, die eine abkürzende Auswertung von booleschen Operatoren („Lazy Evaluation“) vornimmt?
    Diskutieren Sie die Folgen für die Testbarkeit der Implementierung anhand der Testfälle aus 2a) und 2c).
 
-   Bei Lazy Evaluation wird nach dem ersten False in einer Konjunktion oder nach dem ersten True in
-   einer Disjunktion abgebrochen. In einigen Fällen können deswegen zum Beispiel nicht alle
-   Möglichkeiten getestet werden.
+Bei Lazy Evaluation wird nach dem ersten False in einer Konjunktion oder nach dem ersten True in
+einer Disjunktion abgebrochen. In einigen Fällen können deswegen zum Beispiel nicht alle
+Möglichkeiten getestet werden.
 
-   Bei 2a wird sowieso alles getestet. Von daher kann man nicht noch weitere Testfälle hinzuziehen.
+Bei 2a wird sowieso alles getestet. Von daher kann man nicht noch weitere Testfälle hinzuziehen.
 
-   Für 2c muss noch ein Testfall hinzugenommen werden, denn bei dem 3 Testfall, bei dem
-   (x.surName[0]=='D') == False und (x.gender==Female) == True, wird nach dem ersten
-   atomaren Ausdruck abgebrochen, die Auswertung des Geschlechts wird übersprungen.
-   Es fehlt dann noch ein Testfall bei dem der Nachname mit D anfängt und wo die Person weiblich ist.
+Für 2c muss noch ein Testfall hinzugenommen werden, denn bei dem 3 Testfall, bei dem
+```(x.surName[0]=='D') == False``` und ```(x.gender==Female) == True```, wird nach dem ersten
+atomaren Ausdruck abgebrochen, die Auswertung des Geschlechts wird übersprungen.
+
+Es fehlt dann noch ein Testfall bei dem der Nachname mit D anfängt und wo die Person weiblich ist.
