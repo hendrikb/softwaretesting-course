@@ -85,13 +85,13 @@ Dies entspricht einer **Entscheidungsüberdeckung von 100%**.
   * Zeile 1: def(zeichen, alphabet)
   * Zeile 2: def(erstes)
   * Zeile 3: def(letztes)
-  * Zeile 4: p-use(erstes, letztes)
-  * Zeile 5: def(mitte), c-use(erstes, letztes)
-  * Zeile 6: p-use(alphabet, mitte, zeichen)
-  * Zeile 7: def(erstes), c-use(mitte)
+  * Zeile 4: use(erstes, letztes)
+  * Zeile 5: def(mitte), use(erstes, letztes)
+  * Zeile 6: use(alphabet, mitte, zeichen)
+  * Zeile 7: def(erstes), use(mitte)
   * Zeile 8: p-use(alphabet, mitte, zeichen)
-  * Zeile 9: def(letztes), c-use(mitte)
-  * Zeile 11: c-use(mitte)
+  * Zeile 9: def(letztes), use(mitte)
+  * Zeile 11: use(mitte)
 
 Ketten
 ```
