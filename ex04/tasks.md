@@ -1,4 +1,5 @@
 Code:
+```
 1	public static int suche(final char zeichen, final char[] alphabet) {
 2	   int erstes = 0;
 3	   int letztes = alphabet.length - 1;
@@ -14,10 +15,13 @@ Code:
 13	   }
 14	   return -1; // Zeichen nicht gefunden
 15	}
+```
 
 
-Aufgabe 1) 
-a) Bestimmen Sie konkrete Testfälle zur vollständigen Anweisungsüberdeckung und erläutern Sie, warum eine vollständige Anweisungsüberdeckung erreicht wird.
+Aufgabe 1
+==
+
+> **a)** Bestimmen Sie konkrete Testfälle zur vollständigen Anweisungsüberdeckung und erläutern Sie, warum eine vollständige Anweisungsüberdeckung erreicht wird.
 
 Zur vollständigen Anweisungsüberdeckung müssen alle Anweisungen mindestens einmal ausgeführt werden.
 Die beiden Definitionen werden immer ausgeführt, brauchen also keinen besonderen Test.
@@ -40,7 +44,7 @@ Eingabe: z.B. ('e', {}) => (-1)
 
 Damit wurden alle 10 Anweisungen wenigstens einmal ausgeführt.
 
-b) Bestimmen Sie konkrete Testfälle zur vollständigen Zweigüberdeckung und erläutern Sie, warum eine vollständige Zweigüberdeckung erreicht wird.
+> **b)** Bestimmen Sie konkrete Testfälle zur vollständigen Zweigüberdeckung und erläutern Sie, warum eine vollständige Zweigüberdeckung erreicht wird.
 
 Es gibt 3 Entscheidungen und damit 6 Entscheidungsergebnisse:
    1 erstes <= zweites
@@ -68,7 +72,8 @@ also dem 6. Entscheidungsergebnis.
 
 Dies entspricht einer Entscheidungsüberdeckung von 100%.
 
-c) Bestimmen Sie alle du-Ketten in suche.
+> **c)** Bestimmen Sie alle du-Ketten in suche.
+
 1 def(zeichen, alphabet)
 2 def(erstes)
 3 def(letztes)
@@ -104,13 +109,16 @@ Nr.	Zeile Kette
 16	5 def(mitte): c-use(mitte) 9
 17	5 def(mitte): c-use(mitte) 11
 
-d) Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständige du-Kettenüberdeckung erreicht wird.
+> **d)** Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständige du-Kettenüberdeckung erreicht wird.
 
 Der erste Testfall deckt hier alles ab.
 
-Aufgabe 2)
-a) Der Filter wählt alle Einträge aus, die einen Mann repräsentieren, der 18 Jahre oder älter ist und eine Telefonnummer zugewiesen hat.
-P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber
+Aufgabe 2
+==
+
+> **a)** Der Filter wählt alle Einträge aus, die einen Mann repräsentieren, der 18 Jahre oder älter ist und eine Telefonnummer zugewiesen hat.
+
+```P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber```
 
 +----------------+-----------+--------------+-------+------------+
 | x.gender==Male | x.age>=18 | x.contact... | P(x)  | verwenden? |
@@ -125,8 +133,9 @@ P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber
 | False          | False     | True         | False | Ja         |
 +----------------+-----------+--------------+-------+------------+
 
-b) Der Filter wählt die Einträge aller Frauen aus, deren Nachname entweder "Duck" oder "Maus" ist und die über 30 Jahre alt sind.
-P(x) = x.gender==Female && (x.surName=="Duck" || x.surName=="Maus") && x.age>30
+> **b)** Der Filter wählt die Einträge aller Frauen aus, deren Nachname entweder "Duck" oder "Maus" ist und die über 30 Jahre alt sind.
+
+```P(x) = x.gender==Female && (x.surName=="Duck" || x.surName=="Maus") && x.age>30```
 
 +------------------+-------------------+-------------------+----------+-------+------------+
 | x.gender==Female | x.surName=="Duck" | x.surName=="Maus" | x.age>30 | P(x)  | verwenden? |
@@ -149,8 +158,9 @@ P(x) = x.gender==Female && (x.surName=="Duck" || x.surName=="Maus") && x.age>30
 | False            | False             | False             | False    | False | Nein       |
 +------------------+-------------------+-------------------+----------+-------+------------+
 
-c) Der Filter wählt alle Einträge aus, deren Nachnamen mit "D" beginnen und die entweder weiblich sind oder männlich und zudem außerhalb der Altersgruppe 18-65 (also jünger als 18 Jahre bzw. älter als 65 Jahre) sind.
-P(x) = x.surName[0]=='D' && (x.gender==Female || x.gender==Male && (x.age<18 || x.age>65))
+> **c)** Der Filter wählt alle Einträge aus, deren Nachnamen mit "D" beginnen und die entweder weiblich sind oder männlich und zudem außerhalb der Altersgruppe 18-65 (also jünger als 18 Jahre bzw. älter als 65 Jahre) sind.
+
+```P(x) = x.surName[0]=='D' && (x.gender==Female || x.gender==Male && (x.age<18 || x.age>65))```
 
 +-------------------+------------------+----------------+----------+----------+-------+------------+
 | x.surName[0]=='D' | x.gender==Female | x.gender==Male | x.age<18 | x.age>65 | P(x)  | verwenden? |
@@ -169,7 +179,7 @@ P(x) = x.surName[0]=='D' && (x.gender==Female || x.gender==Male && (x.age<18 || 
 | False             | False            | True           | False    | False    | False | Nein       |
 +-------------------+------------------+----------------+----------+----------+-------+------------+
 
-d) Was passiert bei einer Implementierung der konkreten Testfälle mit einer Programmiersprache, die eine abkürzende Auswertung von booleschen Operatoren („Lazy Evaluation“) vornimmt?
+> **d)** Was passiert bei einer Implementierung der konkreten Testfälle mit einer Programmiersprache, die eine abkürzende Auswertung von booleschen Operatoren („Lazy Evaluation“) vornimmt?
    Diskutieren Sie die Folgen für die Testbarkeit der Implementierung anhand der Testfälle aus 2a) und 2c).
 
    Bei Lazy Evaluation wird nach dem ersten False in einer Konjunktion oder nach dem ersten True in
