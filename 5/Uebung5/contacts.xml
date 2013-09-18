@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AddressBook>
+  <Entry DateOfBirth="1.10.1911" FirstName="Dagobert" Gender="M" SurName="Duck">
+    <Contact type="email">dagobert@duck-enterprises.com</Contact>
+  </Entry>
+  <Entry DateOfBirth="30.10.1981" FirstName="Daisy" Gender="F" SurName="Duck">
+    <Contact type="email">daisy@entenhausen.org</Contact>
+  </Entry>
+  <Entry DateOfBirth="23.8.1968" FirstName="Donald" Gender="M" SurName="Duck">
+    <Contact type="phone">12345</Contact>
+  </Entry>
+  <Entry DateOfBirth="14.5.1913" FirstName="Dorette" Gender="F" SurName="Duck">
+    <Contact type="phone">4711</Contact>
+  </Entry>
+  <Entry DateOfBirth="29.2.2000" FirstName="Tick" Gender="M" SurName="Duck">
+    <Contact type="email">tick@fieselschweif.org</Contact>
+  </Entry>
+  <Entry DateOfBirth="29.2.2000" FirstName="Track" Gender="M" SurName="Duck">
+    <Contact type="email">track@fieselschweif.org</Contact>
+  </Entry>
+  <Entry DateOfBirth="29.2.2000" FirstName="Trick" Gender="M" SurName="Duck">
+    <Contact type="email">trick@fieselschweif.org</Contact>
+  </Entry>
+  <Entry DateOfBirth="14.2.1972" FirstName="Gustav" Gender="M" SurName="Gans">
+    <Contact type="phone">54321</Contact>
+  </Entry>
+  <Entry DateOfBirth="7.8.1981" FirstName="Kater" Gender="M" SurName="Karlo">
+    <Contact type="email">karlo@knast.org</Contact>
+  </Entry>
+  <Entry DateOfBirth="3.11.1956" FirstName="Klaas" Gender="M" SurName="Klever">
+    <Contact type="email">klaas@klever-enterprises.com</Contact>
+  </Entry>
+  <Entry DateOfBirth="20.9.1974" FirstName="Micky" Gender="M" SurName="Maus">
+    <Contact type="phone">11011</Contact>
+  </Entry>
+  <Entry DateOfBirth="18.3.1978" FirstName="Minni" Gender="F" SurName="Maus">
+    <Contact type="phone">11211</Contact>
+  </Entry>
+  <Entry DateOfBirth="1.1.1983" FirstName="Rita" Gender="F" SurName="Rührig">
+    <Contact type="email">ruehrig@duck-enterprises.com</Contact>
+  </Entry>
+</AddressBook>
