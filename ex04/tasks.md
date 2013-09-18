@@ -23,24 +23,29 @@ Aufgabe 1
 
 > **a)** Bestimmen Sie konkrete Testfälle zur vollständigen Anweisungsüberdeckung und erläutern Sie, warum eine vollständige Anweisungsüberdeckung erreicht wird.
 
-Zur vollständigen Anweisungsüberdeckung müssen alle Anweisungen mindestens einmal ausgeführt werden.
-Die beiden Definitionen werden immer ausgeführt, brauchen also keinen besonderen Test.
-Für die 3 if-elseif-else-Zweige muss je eine bestimmte Bedingung gelten.
-Für den ersten Zweig: (alphabet[mitte] < zeichen)
-Für den zweiten: (alphabet[mitte] > zeichen)
-Und für den dritten alphabet[mitte] == zeichen
-Das letzte return wird nur ausgeführt, wenn niemals alphabet[mitte] == zeichen.
+  * Zur vollständigen Anweisungsüberdeckung müssen alle Anweisungen mindestens einmal ausgeführt werden.
+  * Die beiden Definitionen werden immer ausgeführt, brauchen also keinen besonderen Test.
+  * Für die 3 if-elseif-else-Zweige muss je eine bestimmte Bedingung gelten.
+    * Für den ersten Zweig: ```(alphabet[mitte] < zeichen)```
+    * Für den zweiten: ```(alphabet[mitte] > zeichen)```
+    * Und für den dritten ```alphabet[mitte] == zeichen```
+  * Das letzte return wird nur ausgeführt, wenn niemals ```alphabet[mitte] == zeichen```.
 
-Eingabe: z.B. ('e', {'a', 'b', 'c', 'd', 'e', 'f', 'g'}) => (4)
--> 1. while wird ausgeführt
--> 2. alphabet[mitte] = 'd' => {'d' < 'e'} der erste Zweig wird ausgeführt
--> 3. alphabet[mitte] = 'f' => {'f' > 'e'} der zweite Zweig wird ausgeführt
--> 4. alphabet[mitte] = 'e' => {'e' == 'e'} der dritte Zweig wird ausgeführt
--> es fehlt nur noch das return -1
+Eingabe: z.B. ```('e', {'a', 'b', 'c', 'd', 'e', 'f', 'g'}) => (4)```
 
-Eingabe: z.B. ('e', {}) => (-1)
--> 1. while wird nicht ausgeführt
--> 2. return -1
+```
+  -> 1. while wird ausgeführt
+  -> 2. alphabet[mitte] = 'd' => {'d' < 'e'} der erste Zweig wird ausgeführt
+  -> 3. alphabet[mitte] = 'f' => {'f' > 'e'} der zweite Zweig wird ausgeführt
+  -> 4. alphabet[mitte] = 'e' => {'e' == 'e'} der dritte Zweig wird ausgeführt
+  -> es fehlt nur noch das return -1
+```
+
+Eingabe: z.B. ```('e', {}) => (-1)```
+```
+   -> 1. while wird nicht ausgeführt
+   -> 2. return -1
+```
 
 Damit wurden alle 10 Anweisungen wenigstens einmal ausgeführt.
 
