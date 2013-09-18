@@ -1,3 +1,21 @@
+Code:
+1	public static int suche(final char zeichen, final char[] alphabet) {
+2	   int erstes = 0;
+3	   int letztes = alphabet.length - 1;
+4	   while (erstes <= letztes) {
+5	     final int mitte = erstes + ((letztes - erstes) / 2);
+6	     if (alphabet[mitte] < zeichen) {
+7	 	erstes = mitte + 1; // Rechts weitersuchen
+8	     } else if (alphabet[mitte] > zeichen) {
+9	        letztes = mitte - 1; // Links weitersuchen
+10	     } else {
+11	       return mitte; // Zeichen gefunden
+12	     }
+13	   }
+14	   return -1; // Zeichen nicht gefunden
+15	}
+
+
 Aufgabe 1) 
 a) Bestimmen Sie konkrete Testfälle zur vollständigen Anweisungsüberdeckung und erläutern Sie, warum eine vollständige Anweisungsüberdeckung erreicht wird.
 
@@ -29,8 +47,8 @@ Es gibt 3 Entscheidungen und damit 6 Entscheidungsergebnisse:
    2 alphabet[mitte] < zeichen
    3 alphabet[mitte] > zeichen
 
-Um alle diese Entscheidungsergebnisse herbeizuführen sind folgende Testfälle denkbar:
-(siehe oben (^^;))
+Um alle diese Entscheidungsergebnisse herbeizuführen sind die beiden obigen Testfälle ebenfalls verwendbar.
+
 Der erste Testfall führt zu:
     1 positiv (check)
     2 positiv (check)
@@ -64,78 +82,34 @@ c) Bestimmen Sie alle du-Ketten in suche.
 
 Ketten
 Nr.	Zeile Kette
-1	1 def(zeichen): p-use(zeichen) 6,8
-2	1 def(alphabet): p-use(alphabet) 6,8
-3	2 def(erstes): p-use(erstes) 4, ( c-use(erstes) 5 )
-4	3 def(letztes): p-use(letztes) 4, ( c-use(letztes) 5 )
-5	5 def(mitte): p-use(mitte) 6, ( c-use(mitte) 7 )
-6	7 def(erstes): p-use(erstes) 4, ...
-7	9 def(letztes): p-use(letztes) 4, ...
-// Comment: Hier fehlen ein paar Fälle:
-Ketten: [Variable, def-Zeile, use-Zeile]
-[erstes,2,5]
-[erstes,2,6]
-[erstes,8,5]
-[erstes,8,6]
+1	1 def(zeichen): p-use(zeichen) 6
+2	1 def(zeichen): p-use(zeichen) 8
 
-[zeichen,1,7]
-[zeichen,1,9]
+3	1 def(alphabet): c-use(alphabet) 3
+4	1 def(alphabet): p-use(alphabet) 6
+5	1 def(alphabet): p-use(alphabet) 8
 
-[alphabet,1,3]
-[alphabet,1,7]
-[alphabet,1,9]
+6	2 def(erstes): c-use(erstes) 5
+7	2 def(erstes): c-use(erstes) 6
+8	2 def(erstes): p-use(erstes) 4
+9	7 def(erstes): p-use(erstes) 4
 
-[letztes,3,5]
-[letztes,3,6]
-[letztes,10,5]
-[letztes,10,6]
+10	3 def(letztes): c-use(letztes) 5
+11	3 def(letztes): p-use(letztes) 4
+12	9 def(letztes): p-use(letztes) 4
 
-[mitte,6,7]
-[mitte,6,8]
-[mitte,6,9]
-[mitte,6,10]
-[mitte,6,12]
+13	5 def(mitte): c-use(mitte) 6
+14	5 def(mitte): c-use(mitte) 7
+15	5 def(mitte): c-use(mitte) 8
+16	5 def(mitte): c-use(mitte) 9
+17	5 def(mitte): c-use(mitte) 11
 
 d) Bestimmen Sie konkrete Testfälle, so dass jede du-Kette mindestens einmal durchlaufen wird ("du-Ketten-Überdeckung") und erläutern Sie, warum eine vollständige du-Kettenüberdeckung erreicht wird.
 
-TODO: test cases
-Der erste Testfall deckt alles ab
-TODO: explanation (cover all chains)
-
-
-
+Der erste Testfall deckt hier alles ab.
 
 Aufgabe 2)
 a) Der Filter wählt alle Einträge aus, die einen Mann repräsentieren, der 18 Jahre oder älter ist und eine Telefonnummer zugewiesen hat.
-M...Geschlecht ist Mann
-A...Alter
-T...wurde Telefonnummer zugewiesen
-
-+-----+------+-----+-----------+
-|  M  | A>=18|  T  |   M AND   |
-|     |      |     | A>=18 AND |
-|     |      |     |     T     |
-+-----+------+-----+-----------+
-|  0  |  0   |  0  |     0     |
-+-----+------+-----+-----------+
-|  0  |  0   |  1  |     0     |
-+-----+------+-----+-----------+
-|  0  |  1   |  0  |     0     |
-+-----+------+-----+-----------+
-|  0  |  1   |  1  |     0     |
-+-----+------+-----+-----------+
-|  1  |  0   |  0  |     0     |
-+-----+------+-----+-----------+
-|  1  |  0   |  1  |     0     |
-+-----+------+-----+-----------+
-|  1  |  1   |  0  |     0     |
-+-----+------+-----+-----------+
-|  1  |  1   |  1  |     1     |
-+-----+------+-----+-----------+
-
-TODO: mark everything
-
-Lösung nr.2:
 P(x) = x.gender==Male && x.age>=18 && x.contact instanceof PhoneNumber
 
 +----------------+-----------+--------------+-------+------------+
