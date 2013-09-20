@@ -1,14 +1,24 @@
-1)
-Zustände:
-First: currentItemIndex = 0 && isDone = false && itemCount > 0
-Valid: currentItemIndex > 0 && isDone = false && itemCount > 1
-End: isDone = true || itemCount = 0
+Aufgabe 1
+==
 
-1a) Siehe Zustandsdiagramm.pdf
+ZustÃ¤nde:
+  * First: ```currentItemIndex = 0 && isDone = false && itemCount > 0```
+  * Valid: ```currentItemIndex > 0 && isDone = false && itemCount > 1```
+  * End: ```isDone = true || itemCount = 0```
 
-1b) Siehe Übergangsbaum.pdf
+1a)
+--
+
+Siehe Zustandsdiagramm.pdf
+
+1b)
+--
+Siehe Ãœbergangsbaum.pdf
 
 1c)
+--
+
+```
 <initial> Iterator <end> ~Iterator <final>
 <initial> Iterator <end> first <end>
 <initial> Iterator <end> isDone <end>
@@ -27,3 +37,4 @@ End: isDone = true || itemCount = 0
 <initial> Iterator <first> next <valid> next <end> isDone <valid>
 <initial> Iterator <first> next <valid> next <end> ~Iterator <final>
 <initial> Iterator <first> next <valid> next <end> first <first>
+```
