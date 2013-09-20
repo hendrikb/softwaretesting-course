@@ -2,6 +2,7 @@ Aufgabe 1
 ==
 
 Zustände:
+
   * First: ```currentItemIndex = 0 && isDone = false && itemCount > 0```
   * Valid: ```currentItemIndex > 0 && isDone = false && itemCount > 1```
   * End: ```isDone = true || itemCount = 0```
