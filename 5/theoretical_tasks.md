@@ -28,7 +28,7 @@ Aufgabe 3
 
 <initial> Iterator <first> next <valid> ~Iterator <final>
 <initial> Iterator <first> next <valid> first <first>
-<initial> Iterator <first> next <valid> next <valid> 
+<initial> Iterator <first> next <valid> next <valid>
 <initial> Iterator <first> next <valid> currItem <valid>
 <initial> Iterator <first> next <valid> isDone <valid>
 
@@ -36,3 +36,10 @@ Aufgabe 3
 <initial> Iterator <first> next <valid> next <end> ~Iterator <final>
 <initial> Iterator <first> next <valid> next <end> first <first>
 ```
+
+Aufgabe 4
+==
+
+Zu finden in der ```TestSorting.java```. Es gab Schwierigkeiten beim Ausführen
+von Abbot unter Linux.
+
