@@ -6,17 +6,15 @@ Zustände:
   * Valid: ```currentItemIndex > 0 && isDone = false && itemCount > 1```
   * End: ```isDone = true || itemCount = 0```
 
-1a)
---
+Das Zustandsdiagramm finden Sie im PDF: Zustandsdiagramm.pdf
 
-Siehe Zustandsdiagramm.pdf
+Aufgabe 2
+==
 
-1b)
---
 Siehe Übergangsbaum.pdf
 
-1c)
---
+Aufgabe 3
+==
 
 ```
 <initial> Iterator <end> ~Iterator <final>
