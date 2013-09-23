@@ -1,5 +1,12 @@
-1a)
+Aufgabe 1
+==
+
+1a
+--
+
 Äquivalenzklassen:
+
+
 	für zeichen: min_char-1, max_char+1, beliebiges Zeichen
 	für alphabet: null, gültiges Array
 	
@@ -12,6 +19,7 @@
 	2) zeichen: gültiges Zeichen 'a', alphabet: null
 	
 Grenzwertanalyse:
+
 	für zeichen: max_char (65535), min_char (0), min_char+1 (1), max_char-1 (65534)
 	für alphabet: null, "", "x", "xxx..." (size Integer.MAX_VALUE-5), "xxx..." (size Integer.MAX_VALUE-4),"xxx..." (size Integer.MAX_VALUE-6)
 	
@@ -30,6 +38,7 @@ Grenzwertanalyse:
 	10) zeichen: 'a', alphabet:"x" * size Integer.MAX_VALUE-6
 	
 Äquivalenzklassen + Grenzwertanalyse:
+
 	Testfälle:
 	1) zeichen: '\uffff', alphabet: "abc"
 	2) zeichen: '\0', alphabet: "abc"
@@ -43,11 +52,13 @@ Grenzwertanalyse:
 	10) zeichen: 'a', alphabet:"x" * size Integer.MAX_VALUE-6
 	11) zeichen: gültiges Zeichen 'a', alphabet: gültiges Array "abc"
 	
-1b)
-	Durch die Äquivalenzklassen und Grenzwertanalyse bekommt man viel mehr Testfälle als bei den du-Ketten.
-	Für die du-Ketten reicht ein Tesfall. Allerdings bekommt man mit der Äquivalenzklassen und Grenzwertanalyse
-	keine 100%ige Pfadabdeckung, da diese zum Beispiel nicht auf die eigentlichen Werte der Zeichen im Array
-	eingehen.
+1b
+--
+
+Durch die Äquivalenzklassen und Grenzwertanalyse bekommt man viel mehr Testfälle als bei den du-Ketten.
+Für die du-Ketten reicht ein Tesfall. Allerdings bekommt man mit der Äquivalenzklassen und Grenzwertanalyse
+keine 100%ige Pfadabdeckung, da diese zum Beispiel nicht auf die eigentlichen Werte der Zeichen im Array
+eingehen.
 
 	
 	
