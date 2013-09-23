@@ -62,3 +62,19 @@ eingehen.
 
 	
 	
+
+Aufgabe 2
+==
+
+Die Anforderungen haben wir im Excel-File Anforderungen.xlsx erfasst, die Risiken sind entsprechend eingeschätzt worden.
+
+Aufgabe 3
+==
+
+Die einzelnen Testfälle der **Musterlösung** haben wir in der Datei Testfaelle.xlsx beschrieben, dokumentiert und die Ergebnisse ausgewertet.
+
+Die Zuordnungen zu den Anforderungen befinden sich in der entsprechenden Spalte im Dokument.
+
+Den Testausführungsaufwand haben wir ganz simpel nach Lines Of Code in der Implementierung des Testfalls bemessen.
+
+Nach dem Gespräch mit dem Testmanager, können wir nun nur noch vier von neun Testfälle testfälle implementieren. Die Spalte  "Test Implementieren (nach Absprache mit Manager)?" gibt Aufschluss darüber, welche der neun Testfälle noch implementiert werden. Die Entscheidung basiert auf der Zuweisung zur Anforderung und deren Risiko/Priorität.
