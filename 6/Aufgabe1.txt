@@ -1,27 +1,27 @@
 1a)
-Äquivalenzklassen:
-	für zeichen: min_char-1, max_char+1, beliebiges Zeichen
-	für alphabet: null, gültiges Array
+Ã„quivalenzklassen:
+	fÃ¼r zeichen: min_char-1, max_char+1, beliebiges Zeichen
+	fÃ¼r alphabet: null, gÃ¼ltiges Array
 	
 	Da in Java min_char-1 = max_char und max_char+1 = min_char
-	können nur gültige Zeichen für den Parameter zeichen übergeben
+	kÃ¶nnen nur gÃ¼ltige Zeichen fÃ¼r den Parameter zeichen Ã¼bergeben
 	werden.
 	
-	Testfälle:
-	1) zeichen: gültiges Zeichen 'a', alphabet: gültiges Array "abc"
-	2) zeichen: gültiges Zeichen 'a', alphabet: null
+	TestfÃ¤lle:
+	1) zeichen: gÃ¼ltiges Zeichen 'a', alphabet: gÃ¼ltiges Array "abc"
+	2) zeichen: gÃ¼ltiges Zeichen 'a', alphabet: null
 	
 Grenzwertanalyse:
-	für zeichen: max_char (65535), min_char (0), min_char+1 (1), max_char-1 (65534)
-	für alphabet: null, "", "x", "xxx..." (size Integer.MAX_VALUE-5), "xxx..." (size Integer.MAX_VALUE-4),"xxx..." (size Integer.MAX_VALUE-6)
+	fÃ¼r zeichen: max_char (65535), min_char (0), min_char+1 (1), max_char-1 (65534)
+	fÃ¼r alphabet: null, "", "x", "xxx..." (size Integer.MAX_VALUE-5), "xxx..." (size Integer.MAX_VALUE-4),"xxx..." (size Integer.MAX_VALUE-6)
 	
-	Testfälle für zeichen:
+	TestfÃ¤lle fÃ¼r zeichen:
 	1) zeichen: '\uffff', alphabet: "abc"
 	2) zeichen: '\0', alphabet: "abc"
 	3) zeichen: '\u0001', alphabet: "abc"
 	4) zeichen: '\ufffe', alphabet: "abc"
 	
-	Testfälle für alphabet:
+	TestfÃ¤lle fÃ¼r alphabet:
 	5) zeichen: 'a', alphabet: null
 	6) zeichen: 'a', alphabet: ""
 	7) zeichen: 'a', alphabet: "x"
@@ -29,8 +29,8 @@ Grenzwertanalyse:
 	9) zeichen: 'a', alphabet: "x" * size Integer.MAX_VALUE-4
 	10) zeichen: 'a', alphabet:"x" * size Integer.MAX_VALUE-6
 	
-Äquivalenzklassen + Grenzwertanalyse:
-	Testfälle:
+Ã„quivalenzklassen + Grenzwertanalyse:
+	TestfÃ¤lle:
 	1) zeichen: '\uffff', alphabet: "abc"
 	2) zeichen: '\0', alphabet: "abc"
 	3) zeichen: '\u0001', alphabet: "abc"
@@ -41,11 +41,11 @@ Grenzwertanalyse:
 	8) zeichen: 'a', alphabet: "x" * size Integer.MAX_VALUE-5
 	9) zeichen: 'a', alphabet: "x" * size Integer.MAX_VALUE-4
 	10) zeichen: 'a', alphabet:"x" * size Integer.MAX_VALUE-6
-	11) zeichen: gültiges Zeichen 'a', alphabet: gültiges Array "abc"
+	11) zeichen: gÃ¼ltiges Zeichen 'a', alphabet: gÃ¼ltiges Array "abc"
 	
 1b)
-	Durch die Äquivalenzklassen und Grenzwertanalyse bekommt man viel mehr Testfälle als bei den du-Ketten.
-	Für die du-Ketten reicht ein Tesfall. Allerdings bekommt man mit der Äquivalenzklassen und Grenzwertanalyse
+	Durch die Ã„quivalenzklassen und Grenzwertanalyse bekommt man viel mehr TestfÃ¤lle als bei den du-Ketten.
+	FÃ¼r die du-Ketten reicht ein Tesfall. Allerdings bekommt man mit der Ã„quivalenzklassen und Grenzwertanalyse
 	keine 100%ige Pfadabdeckung, da diese zum Beispiel nicht auf die eigentlichen Werte der Zeichen im Array
 	eingehen.
 
